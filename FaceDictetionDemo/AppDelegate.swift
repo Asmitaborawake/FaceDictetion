@@ -41,6 +41,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
+    
+    internal func showAlertMessage(alertTitile: String , alertMessage: String) {
+        
+        // create the alert
+        let alert = UIAlertController(title: alertTitile, message: alertMessage, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        // show the alert
+        
+        self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+        
+    }
+
 
 }
 
