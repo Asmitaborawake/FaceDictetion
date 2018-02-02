@@ -36,7 +36,7 @@ class ViewController: UIViewController , UITextFieldDelegate{
                 try WikiFace.faceForPerson(person: textFieldContent, size: CGSize(width:200, height:300), completion: {  (image:UIImage?,imageFound:Bool?) -> () in
                     if imageFound! == true{
                         DispatchQueue.main.async {
-                            self.wikiFaceImg.image = image
+                            self.wikiFaceImg.image =  image
                             
                             WikiFace.centerimageViewOnFace(imageview: self.wikiFaceImg)
                         }
